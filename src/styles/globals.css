@@ -13,10 +13,10 @@
 
 @layer base {
   html {
-    @apply min-h-screen overflow-x-hidden;
+    @apply min-h-screen overflow-x-hidden [--gutter:8.5rem];
   }
   body {
-    @apply font-base bg-black text-white flex flex-col min-h-screen;
+    @apply font-base bg-black text-white flex flex-col min-h-screen select-none;
   }
   a,
   button {
@@ -33,7 +33,7 @@
 
 @layer utilities {
   .app-container {
-    @apply relative w-full max-w-[100rem] mx-auto px-[8.5em];
+    @apply relative w-full max-w-[100rem] mx-auto px-[--gutter];
   }
   .section-circle {
     @apply rounded-full blur-[30px] bg-gradient-radial from-yellow opacity-[0.15] w-[31em] aspect-square;
