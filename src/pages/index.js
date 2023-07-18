@@ -1,5 +1,10 @@
 import { Header } from "@/components/elements";
-import { About, Introduction, Skills } from "@/components/sections";
+import {
+  About,
+  Experiences,
+  Introduction,
+  Skills,
+} from "@/components/sections";
 
 export default function Home() {
   return (
@@ -8,6 +13,7 @@ export default function Home() {
       <Introduction />
       <About />
       <Skills />
+      <Experiences />
     </div>
   );
 }
