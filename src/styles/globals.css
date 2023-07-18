@@ -36,7 +36,7 @@
     @apply relative w-full max-w-[100rem] mx-auto px-[--gutter];
   }
   .section-circle {
-    @apply rounded-full blur-[30px] bg-gradient-radial from-yellow opacity-[0.15] w-[31em] aspect-square;
+    @apply rounded-full blur-[30px] bg-gradient-radial from-yellow opacity-[0.15] w-[31em] aspect-square absolute;
   }
   .section-border {
     @apply w-[80%] mx-auto h-1 bg-gradient-to-l from-transparent via-gray via-50%;
