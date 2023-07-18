@@ -39,6 +39,6 @@
     @apply rounded-full blur-[30px] bg-gradient-radial from-yellow opacity-[0.15] w-[31em] aspect-square absolute;
   }
   .section-border {
-    @apply w-full absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-l from-transparent via-gray via-50%;
+    @apply z-20 w-full absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-l from-transparent via-gray via-50%;
   }
 }
