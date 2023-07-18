@@ -4,6 +4,7 @@ import {
   Experiences,
   Introduction,
   Skills,
+  Education,
 } from "@/components/sections";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Skills />
       <Experiences />
+      <Education />
     </div>
   );
 }

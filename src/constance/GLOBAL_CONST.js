@@ -62,6 +62,26 @@ const GLOBAL_CONST = {
         "Drupal 6 & 7, development of custom modules and themes.\nImplemented Cache technologies using APC, Memcached, and Varnish to reduce database calls and response times.",
     },
   ],
+  educationList: [
+    {
+      id: 1,
+      title: "Computer Software Engineering",
+      date: "2018 - 2018",
+      caption: "Codeup",
+    },
+    {
+      id: 2,
+      title: "Computer Software Engineering",
+      date: "2017 - 2017",
+      caption: "Ruby Association Certified Programmer",
+    },
+    {
+      id: 3,
+      title: "N/A, Computer Science",
+      date: "2016 - 2017",
+      caption: "Austin Community College",
+    },
+  ],
 };
 
 export { GLOBAL_CONST };
