@@ -1,4 +1,4 @@
-import { Header } from "@/components/elements";
+import { Footer, Header } from "@/components/elements";
 import {
   About,
   Experiences,
@@ -16,6 +16,7 @@ export default function Home() {
       <Skills />
       <Experiences />
       <Education />
+      <Footer />
     </div>
   );
 }
