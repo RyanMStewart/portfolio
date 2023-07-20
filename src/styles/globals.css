@@ -13,7 +13,7 @@
 
 @layer base {
   html {
-    @apply min-h-screen overflow-x-hidden [--gutter:8.5rem];
+    @apply min-h-screen overflow-x-hidden [--gutter:8.5rem] [--black:theme('colors.black')];
   }
   body {
     @apply font-base bg-black text-white flex flex-col min-h-screen select-none;
@@ -39,6 +39,6 @@
     @apply pointer-events-none rounded-full blur-[30px] bg-gradient-radial from-yellow/[0.15] w-[31em] aspect-square absolute;
   }
   .section-border {
-    @apply z-20 w-full absolute left-0 right-0 bottom-0 h-[1px] bg-gradient-radial from-transparent via-gray via-50%;
+    @apply z-20 w-full origin-center absolute left-0 right-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-gray;
   }
 }

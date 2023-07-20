@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 import "@/styles/globals.css";
 import { useResize } from "@/hooks";
@@ -21,13 +24,13 @@ function App({ Component, pageProps }) {
       easing: (t) => Math.min(1, 1 - Math.pow(1 - t, 4)),
     });
 
-    function raf(time) {
-      lenis.raf(time);
+    lenis.on("scroll", ScrollTrigger.update);
 
-      requestAnimationFrame(raf);
-    }
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
 
-    raf();
+    gsap.ticker.lagSmoothing(0);
   }, []);
 
   return <Component {...pageProps} />;
