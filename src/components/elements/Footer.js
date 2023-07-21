@@ -3,6 +3,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
+import { useResize } from "@/hooks";
 
 const Footer = () => {
   const vectorRef = useRef(null);
@@ -11,6 +12,8 @@ const Footer = () => {
   const rectRef_2 = useRef(null);
   const containerRef = useRef();
   const { linkedin } = GLOBAL_CONST;
+
+  const { orientation } = useResize({});
 
   useEffect(() => {
     const strokeDash_1 = rectRef_1.current.getTotalLength();
@@ -27,7 +30,7 @@ const Footer = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        scrub: 1.2,
+        scrub: 1.5,
         start: "top bottom",
         end: "bottom bottom",
         trigger: containerRef.current,
@@ -61,10 +64,10 @@ const Footer = () => {
     return () => {
       tl.kill();
     };
-  }, []);
+  }, [orientation]);
 
   return (
-    <footer ref={containerRef} className="em:py-40">
+    <footer ref={containerRef} className="h-screen flex items-center">
       <Link
         href={linkedin}
         className="relative w-full h-[32em] flex items-center justify-center overflow-hidden"
