@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import cn from "classnames";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
+import { useResize } from "@/hooks";
 
 const About = () => {
   const maskRef = useRef(null);
@@ -16,6 +16,8 @@ const About = () => {
   const descriptionRef_1 = useRef(null);
   const descriptionRef_2 = useRef(null);
   const { description } = GLOBAL_CONST;
+
+  const { orientation } = useResize({});
 
   useEffect(() => {
     const strokeDash_1 = rectRef_1.current.getTotalLength();
@@ -112,7 +114,7 @@ const About = () => {
       tl_1.kill();
       tl_2.kill();
     };
-  }, []);
+  }, [orientation]);
 
   return (
     <section className="relative em:py-40" ref={containerRef}>
@@ -151,7 +153,7 @@ const About = () => {
           </svg>
         </div>
       </div>
-      <div className="em:mb-8 font-caption em:text-xl text-center overflow-hidden">
+      <div className="lg:portrait:em:text-5xl em:mb-8 font-caption em:text-xl text-center overflow-hidden">
         <span
           ref={captionRef}
           className="block translate-y-full will-change-transform"
@@ -159,15 +161,15 @@ const About = () => {
           About Me
         </span>
       </div>
-      <div className="flex items-baseline">
-        <h1 className="em:text-8xl" ref={nameRef}>
+      <div className="lg:portrait:flex-col flex items-baseline">
+        <h1 className="lg:portrait:em:text-9xl em:text-8xl" ref={nameRef}>
           {"I'm Ryan Stewart".split("").map((l, index) => (
             <span key={index} className="opacity-0">
               {l}
             </span>
           ))}
         </h1>
-        <div className="overflow-hidden em:text-lg pl-[1.8em]">
+        <div className="lg:portrait:em:text-[2em]  lg:portrait:em:mt-6 lg:portrait:pl-0 overflow-hidden em:text-lg pl-[1.8em]">
           <span
             ref={descriptionRef_1}
             className=" font-caption translate-y-full will-change-transform block"
@@ -176,7 +178,10 @@ const About = () => {
           </span>
         </div>
       </div>
-      <div ref={descriptionRef_2} className="em:text-lg font-caption">
+      <div
+        ref={descriptionRef_2}
+        className="lg:portrait:em:text-[2em] em:text-lg font-caption"
+      >
         {description.split("\n").map((line, index) => (
           <div
             key={index}
