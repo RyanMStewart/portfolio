@@ -35,6 +35,7 @@ const Footer = () => {
     });
 
     tl.to([rectRef_1.current, rectRef_2.current], {
+      delay: 3,
       duration: 5,
       ease: "power1.inOut",
       strokeDashoffset: 0,

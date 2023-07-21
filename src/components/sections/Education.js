@@ -113,7 +113,7 @@ const Education = () => {
             <div className="overflow-hidden">
               <span
                 id="educationCaption"
-                className="will-change-transform translate-y-full block"
+                className="will-change-transform -translate-y-full block"
               >
                 {caption}
               </span>
