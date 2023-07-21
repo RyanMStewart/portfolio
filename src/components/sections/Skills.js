@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
+import { useResize } from "@/hooks";
 
 const Skills = () => {
   const borderRef = useRef(null);
@@ -10,6 +11,8 @@ const Skills = () => {
   const captionRef = useRef(null);
   const containerRef = useRef(null);
   const { skillsList } = GLOBAL_CONST;
+
+  const { orientation } = useResize({});
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -54,7 +57,7 @@ const Skills = () => {
     return () => {
       tl.kill();
     };
-  }, []);
+  }, [orientation]);
 
   return (
     <section ref={containerRef} className="relative em:py-40 text-center">
@@ -62,15 +65,18 @@ const Skills = () => {
         ref={circleRef}
         className="section-circle right-[-27em] top-[-20em] text-[1.3em] opacity-0"
       />
-      <div className="overflow-hidden em:text-xl em:mb-8">
+      <div className="lg:portrait:em:text-5xl overflow-hidden em:text-xl em:mb-8">
         <span ref={captionRef} className="font-caption  block translate-y-full">
           Skills
         </span>
       </div>
-      <ul ref={skillsRef} className="grid grid-cols-3 em:gap-12">
+      <ul
+        ref={skillsRef}
+        className="lg:portrait:em:text-7xl text-[3.25em]  grid grid-cols-[repeat(3,max-content)] justify-between em:gap-y-4"
+      >
         {skillsList.map(({ id, title }) => (
-          <li key={id} className="text-[3.25em] overflow-hidden">
-            <h2 className="translate-y-full">{title}</h2>
+          <li key={id} className=" overflow-hidden">
+            <h2 className="translate-y-full leading-[initial]">{title}</h2>
           </li>
         ))}
       </ul>
