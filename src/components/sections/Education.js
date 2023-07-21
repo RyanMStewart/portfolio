@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
+import { useResize } from "@/hooks";
 
 const Education = () => {
   const borderRef = useRef(null);
@@ -11,6 +12,8 @@ const Education = () => {
   const containerRef = useRef(null);
   const educationListRef = useRef(null);
   const { educationList } = GLOBAL_CONST;
+
+  const { orientation } = useResize({});
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -34,6 +37,8 @@ const Education = () => {
       ease: "power1.out",
     });
 
+    const listTimeline = [];
+
     list.forEach((element) => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -43,6 +48,8 @@ const Education = () => {
           end: "130% center",
         },
       });
+
+      listTimeline.push(tl);
 
       const title = element.querySelector("#educationTitle");
       const date = element.querySelector("#educationDate");
@@ -74,8 +81,9 @@ const Education = () => {
 
     return () => {
       tl.kill();
+      listTimeline.forEach((t) => t.kill());
     };
-  }, []);
+  }, [orientation]);
 
   return (
     <section ref={containerRef} className="em:py-40 relative text-center">
@@ -87,7 +95,7 @@ const Education = () => {
         ref={circleRef_2}
         className="section-circle right-[-22em] top-[15em] text-[1.5em] opacity-0"
       />
-      <div className="overflow-hidden em:text-xl em:mb-8">
+      <div className="lg:portrait:em:text-5xl overflow-hidden em:text-xl em:mb-8">
         <span
           ref={captionRef}
           className="font-caption translate-y-full block will-change-transform"
@@ -95,17 +103,22 @@ const Education = () => {
           Education
         </span>
       </div>
-      <ul ref={educationListRef} className="flex flex-col gap-y-[5.5em]">
+      <ul
+        ref={educationListRef}
+        className="lg:portrait:em:text-xl flex flex-col gap-y-[5.5em]"
+      >
         {educationList.map(({ id, title, caption, date }) => (
-          <li key={id} className="flex flex-col relative text-[3.25em]">
+          <li
+            key={id}
+            className="flex flex-col relative text-[3.25em] leading-[initial]"
+          >
             <h3 id="educationTitle" className="opacity-0">
               {title}
             </h3>
-
             <div className="overflow-hidden">
               <span
                 id="educationDate"
-                className="will-change-transform translate-y-full block"
+                className="will-change-transform translate-y-[120%] block"
               >
                 {date}
               </span>
@@ -113,7 +126,7 @@ const Education = () => {
             <div className="overflow-hidden">
               <span
                 id="educationCaption"
-                className="will-change-transform -translate-y-full block"
+                className="will-change-transform -translate-y-[120%] block"
               >
                 {caption}
               </span>
