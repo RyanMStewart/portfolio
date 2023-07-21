@@ -70,8 +70,9 @@ const Footer = () => {
     <footer ref={containerRef} className="h-screen flex items-center">
       <Link
         href={linkedin}
-        className="relative w-full h-[32em] flex items-center justify-center overflow-hidden"
+        className="group relative w-full h-[32em] flex items-center justify-center overflow-hidden"
       >
+        <div className="hover-effect w-full h-1/2 blur-[150px] " />
         <svg className="w-full h-full absolute">
           <rect
             ref={rectRef_1}

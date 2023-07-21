@@ -117,10 +117,11 @@ const Experiences = () => {
           ({ id, title, caption, date, description }, index) => (
             <li
               key={id}
-              className={cn("flex flex-col relative group", {
+              className={cn("group flex flex-col relative group", {
                 "em:pt-20": index >= 1,
               })}
             >
+              <div className="hover-effect w-1/2 h-1/4 blur-[100px]" />
               <h3
                 className="em:text-6xl opacity-0 will-change-transform"
                 id="experiencesTitle"
