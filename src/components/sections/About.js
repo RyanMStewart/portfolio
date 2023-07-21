@@ -115,8 +115,8 @@ const About = () => {
   }, []);
 
   return (
-    <section className="relative py-[10em]" ref={containerRef}>
-      <div className="relative w-[65em] h-[27em] mx-auto flex items-center justify-center overflow-hidden self-center mb-[10em]">
+    <section className="relative em:py-40" ref={containerRef}>
+      <div className="relative w-[65em] h-[27em] mx-auto flex items-center justify-center overflow-hidden self-center em:mb-40">
         <svg className="w-full h-full absolute">
           <rect
             ref={rectRef_1}
@@ -151,7 +151,7 @@ const About = () => {
           </svg>
         </div>
       </div>
-      <div className="mb-[2em] font-caption text-[1.25em] text-center overflow-hidden">
+      <div className="em:mb-8 font-caption em:text-xl text-center overflow-hidden">
         <span
           ref={captionRef}
           className="block translate-y-full will-change-transform"
@@ -160,14 +160,14 @@ const About = () => {
         </span>
       </div>
       <div className="flex items-baseline">
-        <h1 className="text-[6em]" ref={nameRef}>
+        <h1 className="em:text-8xl" ref={nameRef}>
           {"I'm Ryan Stewart".split("").map((l, index) => (
             <span key={index} className="opacity-0">
               {l}
             </span>
           ))}
         </h1>
-        <div className="overflow-hidden text-[1.125em] pl-[1.8em]">
+        <div className="overflow-hidden em:text-lg pl-[1.8em]">
           <span
             ref={descriptionRef_1}
             className=" font-caption translate-y-full will-change-transform block"
@@ -176,18 +176,12 @@ const About = () => {
           </span>
         </div>
       </div>
-      <div
-        ref={descriptionRef_2}
-        className="text-[1.125em] leading-[2] font-caption"
-      >
+      <div ref={descriptionRef_2} className="em:text-lg font-caption">
         {description.split("\n").map((line, index) => (
           <div
             key={index}
             ref={descriptionRef_2}
-            className={cn("overflow-hidden", {
-              "mt-[1.5em]": index >= 1,
-              "mt-[0.7em]": index === 0,
-            })}
+            className="overflow-hidden em:mt-6"
           >
             <span
               key={index}

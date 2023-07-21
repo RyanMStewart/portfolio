@@ -64,7 +64,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={containerRef} className="py-[10em]">
+    <footer ref={containerRef} className="em:py-40">
       <Link
         href={linkedin}
         className="relative w-full h-[32em] flex items-center justify-center overflow-hidden"

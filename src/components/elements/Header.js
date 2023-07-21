@@ -34,7 +34,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex items-center justify-between py-8 font-caption text-[1.25em] absolute left-[--gutter] right-[--gutter] overflow-hidden">
+    <header className="flex items-center justify-between em:py-8 font-caption em:text-xl absolute left-0 right-0 overflow-hidden">
       <div ref={nameRef}>
         {"Ryan".split("").map((l, index) => (
           <span key={index} className="opacity-0">

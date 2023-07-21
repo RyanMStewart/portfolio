@@ -89,15 +89,15 @@ const Introduction = () => {
     <section className="flex justify-center items-center h-screen">
       <div
         ref={circleRef_1}
-        className="section-circle right-[-10em] top-[-15em] text-[1.3em] opacity-0"
+        className="section-circle right-[-20em] top-[-15em] text-[1.3em] opacity-0"
       />
       <div
         ref={circleRef_2}
-        className="section-circle top-[10em] left-[-20em] text-[1.5em] opacity-0"
+        className="section-circle top-[calc(var(--vh)*52)] left-[-20em] text-[1.5em] opacity-0"
       />
-      <div className="text-10xl flex flex-col">
-        <div className="flex flex-row items-center gap-x-[0.25em]">
-          <div ref={titleRef_1}>
+      <div className="flex flex-col">
+        <div className="flex flex-row items-center em:gap-x-16">
+          <div ref={titleRef_1} className="text-10xl">
             {"SENIOR".split("").map((l, index) => (
               <span key={index} className="opacity-0">
                 {l}
@@ -106,7 +106,7 @@ const Introduction = () => {
           </div>
           <div
             ref={captionRef_1}
-            className="text-lg whitespace-pre font-caption pt-[1em] flex flex-col"
+            className="em:text-lg whitespace-pre font-caption em:pt-4 flex flex-col"
           >
             {"With over 5 years\nof experience in designing and\ndeveloping websites & web and\nmobile applications...."
               .split("\n")
@@ -117,17 +117,17 @@ const Introduction = () => {
               ))}
           </div>
         </div>
-        <div ref={titleRef_2}>
+        <div ref={titleRef_2} className="text-10xl">
           {"SOFTWARE".split("").map((l, index) => (
             <span key={index} className="opacity-0">
               {l}
             </span>
           ))}
         </div>
-        <div className="flex flex-row items-center gap-x-[0.25em]">
+        <div className="flex flex-row items-center em:gap-x-8">
           <div
             ref={captionRef_2}
-            className="text-lg whitespace-pre font-caption pt-[1em] flex flex-col"
+            className="em:text-lg whitespace-pre font-caption em:pt-4 flex flex-col"
           >
             {"Based in:\nSan Antonio,\nTexas\nUnited States"
               .split("\n")
@@ -137,7 +137,7 @@ const Introduction = () => {
                 </span>
               ))}
           </div>
-          <div ref={titleRef_3}>
+          <div ref={titleRef_3} className="text-10xl">
             {"ENGINEER".split("").map((l, index) => (
               <span key={index} className="opacity-0">
                 {l}

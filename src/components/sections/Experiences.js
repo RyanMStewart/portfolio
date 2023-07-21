@@ -91,12 +91,12 @@ const Experiences = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative py-[10em] text-center">
+    <section ref={containerRef} className="relative em:py-40 text-center">
       <div
         ref={circleRef}
         className="section-circle left-[-28em] top-[-15em] opacity-0"
       />
-      <div className="overflow-hidden text-[1.25em] mb-[2em] ">
+      <div className="overflow-hidden em:text-xl em:mb-8">
         <span
           ref={captionRef}
           className="font-caption block translate-y-full will-change-transform"
@@ -110,26 +110,26 @@ const Experiences = () => {
             <li
               key={id}
               className={cn("flex flex-col relative group", {
-                "pt-[5em]": index >= 1,
+                "em:pt-20": index >= 1,
               })}
             >
               <h3
-                className="text-[3.75em] opacity-0 will-change-transform"
+                className="em:text-6xl opacity-0 will-change-transform"
                 id="experiencesTitle"
               >
                 {title}
               </h3>
               <div
-                className="flex flex-row justify-center font-caption text-[1.125em] mt-[0.5em] overflow-hidden"
+                className="flex flex-row justify-center font-caption em:text-lg em:mt-4 overflow-hidden"
                 id="experiencesDetails"
               >
                 <span className="translate-y-full">{caption}</span>
                 <span className="mx-[0.7em] translate-y-full">•</span>
                 <span className="translate-y-full">{date}</span>
               </div>
-              <div className="mt-[1.7em] text-[1.125em] overflow-hidden">
+              <div className="em:mt-7 em:text-lg overflow-hidden">
                 <p
-                  className="font-caption whitespace-pre leading-[1.8] translate-y-full will-change-transform"
+                  className="font-caption whitespace-pre translate-y-full will-change-transform"
                   id="experiencesDescription"
                 >
                   {description}

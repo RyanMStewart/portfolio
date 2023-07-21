@@ -57,17 +57,17 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative py-[10em] text-center">
+    <section ref={containerRef} className="relative em:py-40 text-center">
       <div
         ref={circleRef}
         className="section-circle right-[-27em] top-[-20em] text-[1.3em] opacity-0"
       />
-      <div className="overflow-hidden text-[1.25em] mb-[2em]">
+      <div className="overflow-hidden em:text-xl em:mb-8">
         <span ref={captionRef} className="font-caption  block translate-y-full">
           Skills
         </span>
       </div>
-      <ul ref={skillsRef} className="grid grid-cols-3 gap-[3em]">
+      <ul ref={skillsRef} className="grid grid-cols-3 em:gap-12">
         {skillsList.map(({ id, title }) => (
           <li key={id} className="text-[3.25em] overflow-hidden">
             <h2 className="translate-y-full">{title}</h2>

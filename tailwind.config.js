@@ -19,6 +19,11 @@ module.exports = {
       base: "Playfair Display",
       caption: "Almarai",
     },
+    screens: {
+      lg: { max: "1024px" },
+      md: { max: "767px" },
+      sm: { max: "639px" },
+    },
     extend: {
       backgroundImage: {
         "gradient-radial":
@@ -35,5 +40,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    require("tailwindcss/plugin")(function ({ addVariant }) {
+      addVariant("em", ({ container }) => {
+        container.walkRules((rule) => {
+          rule.selector = `.em\\:${rule.selector.slice(1)}`;
+          rule.walkDecls((decl) => {
+            decl.value = decl.value.replace("rem", "em");
+          });
+        });
+      });
+    }),
+  ],
 };

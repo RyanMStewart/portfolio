@@ -78,7 +78,7 @@ const Education = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-[10em] relative text-center">
+    <section ref={containerRef} className="em:py-40 relative text-center">
       <div
         ref={circleRef_1}
         className="section-circle left-[-28em] top-[5em] text-[1.2em] opacity-0"
@@ -87,7 +87,7 @@ const Education = () => {
         ref={circleRef_2}
         className="section-circle right-[-22em] top-[15em] text-[1.5em] opacity-0"
       />
-      <div className="overflow-hidden text-[1.25em] mb-[2em]">
+      <div className="overflow-hidden em:text-xl em:mb-8">
         <span
           ref={captionRef}
           className="font-caption translate-y-full block will-change-transform"
