@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
+import { useResize } from "@/hooks";
 
 const Experiences = () => {
   const borderRef = useRef(null);
@@ -11,6 +12,8 @@ const Experiences = () => {
   const containerRef = useRef(null);
   const experiencesListRef = useRef(null);
   const { experiencesList } = GLOBAL_CONST;
+
+  const { orientation } = useResize({});
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -37,6 +40,8 @@ const Experiences = () => {
       "<"
     );
 
+    const listTimelines = [];
+
     list.forEach((element) => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -46,6 +51,8 @@ const Experiences = () => {
           end: "130% center",
         },
       });
+
+      listTimelines.push(tl);
 
       const title = element.querySelector("#experiencesTitle");
       const details = element.querySelector("#experiencesDetails");
@@ -87,8 +94,9 @@ const Experiences = () => {
 
     return () => {
       tl.kill();
+      listTimelines.forEach((t) => t.kill());
     };
-  }, []);
+  }, [orientation]);
 
   return (
     <section ref={containerRef} className="relative em:py-40 text-center">
@@ -96,7 +104,7 @@ const Experiences = () => {
         ref={circleRef}
         className="section-circle left-[-28em] top-[-15em] opacity-0"
       />
-      <div className="overflow-hidden em:text-xl em:mb-8">
+      <div className="lg:portrait:em:text-5xl overflow-hidden em:text-xl em:mb-8">
         <span
           ref={captionRef}
           className="font-caption block translate-y-full will-change-transform"
@@ -104,7 +112,7 @@ const Experiences = () => {
           Experiences
         </span>
       </div>
-      <ul ref={experiencesListRef}>
+      <ul ref={experiencesListRef} className="lg:portrait:em:text-xl">
         {experiencesList.map(
           ({ id, title, caption, date, description }, index) => (
             <li
