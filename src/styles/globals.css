@@ -13,7 +13,7 @@
 
 @layer base {
   html {
-    @apply min-h-screen overflow-x-hidden [--gutter:8.5rem] [--black:theme('colors.black')];
+    @apply min-h-screen overflow-x-hidden [--black:theme('colors.black')] scrollbar-none;
   }
   body {
     @apply font-base bg-black text-white flex flex-col min-h-screen select-none;
@@ -33,7 +33,7 @@
 
 @layer utilities {
   .app-container {
-    @apply relative w-full max-w-[100rem] mx-auto px-[--gutter];
+    @apply relative mx-auto w-[85%];
   }
   .section-circle {
     @apply pointer-events-none rounded-full blur-[30px] bg-gradient-radial from-yellow/[0.15] w-[31em] aspect-square absolute;

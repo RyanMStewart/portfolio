@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import "@/styles/globals.css";
 import { useResize } from "@/hooks";
+import { Footer, Header } from "@/components/elements";
 
 function App({ Component, pageProps }) {
   useResize({
@@ -33,7 +34,13 @@ function App({ Component, pageProps }) {
     gsap.ticker.lagSmoothing(0);
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <div className="lg:text-[1.2vw] text-[0.94vw] app-container">
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
