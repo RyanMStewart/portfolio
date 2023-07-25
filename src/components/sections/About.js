@@ -143,7 +143,7 @@ const About = () => {
           <img
             src="./avatar.png"
             alt="Ryan Stewart"
-            className="w-full h-full object-cover bg-black"
+            className="w-full h-full object-cover bg-black grayscale"
           />
           <svg className="w-full h-full absolute top-0 left-0 right-0 bottom-0 z-30">
             <rect
