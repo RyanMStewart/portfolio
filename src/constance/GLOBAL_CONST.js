@@ -32,34 +32,106 @@ const GLOBAL_CONST = {
     {
       id: 1,
       title: "Senior Software Engineer",
-      caption: "At Acquia, Chicago, IL",
-      date: "August 2017 - October 2022",
-      description:
-        "Implemented an automated employee entitlement system to provide new employees at Acquia.\nIntegrated with 10+ different APIs to create a robust, error-resilient collection of microsystems.",
+      caption: "At Bill Miller Bar-B-Q",
+      date: "Mar 2021 - Jul 2023",
+      description: [
+        {
+          id: 1,
+          text: "Executed the design and development of web applications utilizing languages such as PHP, Python, and Ruby.",
+        },
+        {
+          id: 2,
+          text: "Implemented the visual aspects of websites using front-end technologies like HTML, CSS, and JavaScript.",
+        },
+        {
+          id: 3,
+          text: "Worked in close coordination with the managerial team to construct and uphold the infrastructure of applications.",
+        },
+        {
+          id: 4,
+          text: "Undertook the responsibility for the maintenance and further development of services integral to the company's Learning Management System (LMS).",
+        },
+        {
+          id: 5,
+          text: "Employed Ionic/Capacitor and Nuxt for the design, development, and upkeep of a cross-platform mobile application.",
+        },
+        {
+          id: 6,
+          text: "Tasked with the maintenance of the company's WordPress websites.",
+        },
+        {
+          id: 7,
+          text: "Contributed to the design and management of databases using MySQL and PostgreSQL.",
+        },
+        {
+          id: 8,
+          text: "Employed Google Cloud Platform (GCP) services for the orchestration of containers and the management of applications.",
+        },
+      ],
     },
     {
       id: 2,
-      title: "Senior Software Engineer",
-      caption: "At Media Research Center, Reston, VA",
-      date: "September 2012 - June 2017",
-      description:
-        "Responsible for managing all aspects of the organization's Drupal sites, including maintenance and enhancement of current sites, development of\nnew sites, and hosting infrastructure.",
+      title: "Software Developer",
+      caption: "At Turner Logic",
+      date: "Dec 2018 - Sep 2021",
+      description: [
+        {
+          id: 1,
+          text: "As an independent contractor, I have provided services to diverse clients, focusing on the development of both web and desktop applications leveraging PHP, Go, and JavaScript.",
+        },
+        {
+          id: 2,
+          text: "I've managed the development and maintenance of client databases employing MySQL and MongoDB.",
+        },
+        {
+          id: 3,
+          text: "I have designed and developed front-end aspects of web projects using HTML, CSS, and JavaScript.",
+        },
+        {
+          id: 4,
+          text: "With proficiency in AWS services, I've used them to enhance the functionality of applications.",
+        },
+        {
+          id: 5,
+          text: "Additionally, I've aided clients in the deployment of native iOS and Android applications, utilizing Swift and Kotlin respectively.",
+        },
+      ],
     },
     {
       id: 3,
-      title: "Lead Web Developer/Drupal CMS Developer",
-      caption: "At SawGrass Shack",
-      date: "September 2009 - September 2012",
-      description:
-        "Lots of Drupal website theming and module building, built sites from scratch, as well as integrated new features into existing sites.\nE-commerce using Ubercart, members' only areas, integration between web services & Ubercart, etc.",
+      title: "Operations Manager",
+      caption: "At The Finish Line",
+      date: "Oct 2016 - Mar 2018",
+      description: [
+        {
+          id: 1,
+          text: "Provided direction to the employees that was concurrent with the standards and practices that the business was built on.",
+        },
+        {
+          id: 2,
+          text: "Produced labor cost and general sales reports regarding the previous day for senior management.",
+        },
+        {
+          id: 3,
+          text: "Worked with financial operations to ensure efficient use of capital.",
+        },
+        {
+          id: 4,
+          text: "Tracked KPIs and increased satisfaction wherever and whenever possible.",
+        },
+      ],
     },
     {
       id: 4,
-      title: "Senior Web Developer",
-      caption: "At Imagen Digital México, Villahermosa yalrededores, México",
-      date: "March 2004 - July 2009",
-      description:
-        "Drupal 6 & 7, development of custom modules and themes.\nImplemented Cache technologies using APC, Memcached, and Varnish to reduce database calls and response times.",
+      title: "Store Manager",
+      caption: "At SPUN Ice Cream",
+      date: "Nov 2015 - Oct 2016",
+      description: [
+        {
+          id: 1,
+          text: "As the store manager my responsibilities included: developing lasting relationships with the customers, greeting the day by opening the store and closing up in the evening, screening, hiring and terminating employees, taking inventory and addressing any discrepancies, ensuring high product quality standards, calculating payroll for different departments, working with vendors, scheduling the employees, pricing the product, and collaborating with the owners to implement the company mission statement.",
+        },
+      ],
     },
   ],
   educationList: [

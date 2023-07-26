@@ -50,7 +50,7 @@ const Experiences = () => {
           scrub: 1.2,
           trigger: element,
           start: "-20% center",
-          end: "130% center",
+          end: "center center",
         },
       });
 
@@ -95,7 +95,7 @@ const Experiences = () => {
 
     cancelSelectedTimestamp.current = setTimeout(() => {
       setSelected(null);
-    }, 3000);
+    }, 30000);
   };
 
   return (
@@ -137,17 +137,19 @@ const Experiences = () => {
                 <span className="mx-[0.7em] translate-y-full">•</span>
                 <span className="translate-y-full">{date}</span>
               </div>
-              <div className="em:mt-7 em:text-lg overflow-hidden">
-                <p
-                  className={cn(
-                    "transition-transform duration-700 font-caption whitespace-pre translate-y-full will-change-transform",
-                    {
-                      "translate-y-0": id === selected,
-                    }
-                  )}
-                >
-                  {description}
-                </p>
+              <div
+                className={cn(
+                  "em:mt-7 em:text-lg transition-all duration-700 ease-out font-caption overflow-hidden max-h-0",
+                  {
+                    "em:max-h-36": id === selected,
+                  }
+                )}
+              >
+                {description.map(({ id, text }) => (
+                  <p className={cn()} key={id}>
+                    {text}
+                  </p>
+                ))}
               </div>
             </li>
           )
