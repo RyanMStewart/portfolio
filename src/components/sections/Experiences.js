@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 import { GLOBAL_CONST } from "@/constance";
@@ -12,6 +12,8 @@ const Experiences = () => {
   const containerRef = useRef(null);
   const experiencesListRef = useRef(null);
   const { experiencesList } = GLOBAL_CONST;
+  const [selected, setSelected] = useState(null);
+  const cancelSelectedTimestamp = useRef(null);
 
   const { orientation } = useResize({});
 
@@ -56,28 +58,17 @@ const Experiences = () => {
 
       const title = element.querySelector("#experiencesTitle");
       const details = element.querySelector("#experiencesDetails");
-      const description = element.querySelector("#experiencesDescription");
 
       tl.to(title, {
         opacity: 1,
         duration: 3,
         ease: "power1.out",
-      })
-        .to(details.children, {
-          y: 0,
-          duration: 3,
-          stagger: 0.5,
-          ease: "power1.out",
-        })
-        .to(
-          description,
-          {
-            y: 0,
-            duration: 5,
-            ease: "power1.out",
-          },
-          "<"
-        );
+      }).to(details.children, {
+        y: 0,
+        duration: 3,
+        stagger: 0.5,
+        ease: "power1.out",
+      });
     });
 
     gsap.to(borderRef.current, {
@@ -98,6 +89,15 @@ const Experiences = () => {
     };
   }, [orientation]);
 
+  const onSelectItem = (id) => {
+    clearTimeout(cancelSelectedTimestamp.current);
+    setSelected(id);
+
+    cancelSelectedTimestamp.current = setTimeout(() => {
+      setSelected(null);
+    }, 3000);
+  };
+
   return (
     <section ref={containerRef} className="relative em:py-40 text-center">
       <div
@@ -116,6 +116,7 @@ const Experiences = () => {
         {experiencesList.map(
           ({ id, title, caption, date, description }, index) => (
             <li
+              onClick={onSelectItem.bind(null, id)}
               key={id}
               className={cn("group flex flex-col relative group", {
                 "em:pt-20": index >= 1,
@@ -138,8 +139,12 @@ const Experiences = () => {
               </div>
               <div className="em:mt-7 em:text-lg overflow-hidden">
                 <p
-                  className="font-caption whitespace-pre translate-y-full will-change-transform"
-                  id="experiencesDescription"
+                  className={cn(
+                    "transition-transform duration-700 font-caption whitespace-pre translate-y-full will-change-transform",
+                    {
+                      "translate-y-0": id === selected,
+                    }
+                  )}
                 >
                   {description}
                 </p>
