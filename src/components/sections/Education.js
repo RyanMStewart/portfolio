@@ -44,8 +44,8 @@ const Education = () => {
         scrollTrigger: {
           scrub: 1.2,
           trigger: element,
-          start: "-20% center",
-          end: "130% center",
+          start: "-50% center",
+          end: "center center",
         },
       });
 
@@ -57,11 +57,11 @@ const Education = () => {
 
       tl.to(title, {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: "power1.out",
       }).to([date, caption], {
         y: 0,
-        duration: 3,
+        duration: 8,
         stagger: 0.5,
         ease: "power1.out",
       });

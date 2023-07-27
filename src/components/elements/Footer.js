@@ -67,12 +67,15 @@ const Footer = () => {
   }, [orientation]);
 
   return (
-    <footer ref={containerRef} className="h-screen flex items-center">
+    <footer
+      ref={containerRef}
+      className="group hover:text-yellow h-screen flex items-center relative"
+    >
+      <div className="hover-effect w-full h-1/2 blur-[150px] z-50" />
       <Link
         href={linkedin}
-        className="group relative w-full h-[32em] flex items-center justify-center overflow-hidden"
+        className=" relative w-full h-[32em] flex items-center justify-center overflow-hidden"
       >
-        <div className="hover-effect w-full h-1/2 blur-[150px] " />
         <svg className="w-full h-full absolute">
           <rect
             ref={rectRef_1}

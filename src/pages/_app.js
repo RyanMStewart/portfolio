@@ -20,7 +20,7 @@ function App({ Component, pageProps }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 3,
+      duration: 6,
       smoothWheel: true,
       easing: (t) => Math.min(1, 1 - Math.pow(1 - t, 4)),
     });

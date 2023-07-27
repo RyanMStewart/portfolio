@@ -5,7 +5,7 @@ import { GLOBAL_CONST } from "@/constance";
 import { useResize } from "@/hooks";
 
 const About = () => {
-  const maskRef = useRef(null);
+  const avatarRef = useRef(null);
   const nameRef = useRef(null);
   const captionRef = useRef(null);
   const rectRef_1 = useRef(null);
@@ -55,23 +55,21 @@ const About = () => {
         ease: "power1.inOut",
         strokeDashoffset: 0,
       })
-      .to(maskRef.current, {
-        duration: 3,
-        "--mask-rad": 45,
-        "--mask-start": 0,
-        "--mask-end": 100,
-        ease: "power1.inOut",
-      })
       .to(
-        vectorRef.current,
+        avatarRef.current,
         {
-          opacity: 1,
-          scale: 1.1,
-          duration: 3,
-          ease: "power1.inOut",
+          scale: 1,
+          duration: 5,
+          ease: "power1.out",
         },
         "<"
-      );
+      )
+      .to(vectorRef.current, {
+        opacity: 1,
+        scale: 1.1,
+        duration: 3,
+        ease: "power1.inOut",
+      });
 
     tl_2
       .to(captionRef.current, {
@@ -132,23 +130,16 @@ const About = () => {
           className="w-full h-full scale-125 absolute -z-10 object-cover opacity-0"
         />
         <div className="h-[80%] aspect-square overflow-hidden z-index-1 relative">
-          <div
-            ref={maskRef}
-            className="w-full h-full absolute left-0 right-0 bottom-0 top-0 z-10 [--mask-start:50] [--mask-end:50] [--mask-rad:0]"
-            style={{
-              backgroundImage:
-                "linear-gradient(calc(var(--mask-rad) * 1deg), var(--black) calc(var(--mask-start) * 1%), transparent 0, transparent calc(var(--mask-end) * 1%), var(--black) 0)",
-            }}
-          />
           <img
+            ref={avatarRef}
             src="./avatar.png"
             alt="Ryan Stewart"
-            className="w-full h-full object-cover bg-black grayscale"
+            className="w-full h-full object-cover bg-black scale-125"
           />
           <svg className="w-full h-full absolute top-0 left-0 right-0 bottom-0 z-30">
             <rect
               ref={rectRef_2}
-              className="w-full h-full fill-none stroke-[5] stroke-gray"
+              className="w-full h-full fill-none stroke-[5] stroke-yellow"
             />
           </svg>
         </div>

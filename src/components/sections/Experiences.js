@@ -118,11 +118,11 @@ const Experiences = () => {
             <li
               onClick={onSelectItem.bind(null, id)}
               key={id}
-              className={cn("group flex flex-col relative group", {
+              className={cn("group hover:text-yellow flex flex-col relative", {
                 "em:pt-20": index >= 1,
               })}
             >
-              <div className="hover-effect w-1/2 h-1/4 blur-[100px]" />
+              <div className="hover-effect w-1/2 h-1/4 blur-[70px]" />
               <h3
                 className="em:text-6xl opacity-0 will-change-transform"
                 id="experiencesTitle"
@@ -146,9 +146,7 @@ const Experiences = () => {
                 )}
               >
                 {description.map(({ id, text }) => (
-                  <p className={cn()} key={id}>
-                    {text}
-                  </p>
+                  <p key={id}>{text}</p>
                 ))}
               </div>
             </li>
