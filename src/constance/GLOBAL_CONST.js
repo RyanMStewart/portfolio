@@ -150,7 +150,7 @@ const GLOBAL_CONST = {
     },
     {
       id: 3,
-      title: "N/A, Computer Science",
+      title: "Computer Science",
       date: "2016 - 2017",
       caption: "Austin Community College",
     },
