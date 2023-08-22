@@ -32,7 +32,7 @@ const GLOBAL_CONST = {
   experiencesList: [
     {
       id: 1,
-      title: "Senior Software Engineer",
+      title: "Staff Software Engineer",
       caption: "At Bill Miller Bar-B-Q",
       date: "Mar 2021 - Jul 2023",
       description: [
@@ -72,7 +72,7 @@ const GLOBAL_CONST = {
     },
     {
       id: 2,
-      title: "Software Developer",
+      title: "Senior Software Engineer",
       caption: "At Turner Logic",
       date: "Dec 2018 - Sep 2021",
       description: [
@@ -100,37 +100,37 @@ const GLOBAL_CONST = {
     },
     {
       id: 3,
-      title: "Operations Manager",
-      caption: "At The Finish Line",
-      date: "Oct 2016 - Mar 2018",
+      title: "Senior Software Engineer",
+      caption: "Indeed",
+      date: "Oct 2016 - Nov 2018",
       description: [
         {
           id: 1,
-          text: "Provided direction to the employees that was concurrent with the standards and practices that the business was built on.",
+          text: "Built a single page Financial Adjustment System which charges, refunds, places credit for job advertisers. Reduced Indeed’s annualized costs over $11 million in finance and customer service departments.",
         },
         {
           id: 2,
-          text: "Produced labor cost and general sales reports regarding the previous day for senior management.",
+          text: "Led the initiative of performance monitoring metrics for ERP syncing system; analyzed and identified the performance bottleneck; tuned up syncing speed, and laid out further performance improvement plan.",
         },
         {
           id: 3,
-          text: "Worked with financial operations to ensure efficient use of capital.",
-        },
-        {
-          id: 4,
-          text: "Tracked KPIs and increased satisfaction wherever and whenever possible.",
+          text: "Created a series of financial microservices including revenue daily breakdown service, subscription service, financial web service, ERP data sync service.",
         },
       ],
     },
     {
       id: 4,
-      title: "Store Manager",
-      caption: "At SPUN Ice Cream",
-      date: "Nov 2015 - Oct 2016",
+      title: "Software Engineer",
+      caption: "Aviat Networks",
+      date: "Jan 2011 - Sep 2016",
       description: [
         {
           id: 1,
-          text: "As the store manager my responsibilities included: developing lasting relationships with the customers, greeting the day by opening the store and closing up in the evening, screening, hiring and terminating employees, taking inventory and addressing any discrepancies, ensuring high product quality standards, calculating payroll for different departments, working with vendors, scheduling the employees, pricing the product, and collaborating with the owners to implement the company mission statement.",
+          text: "Designed, improved, coded and debugged applications in various software languages, with specific emphasis on manufacturing plantfloor related systems and applications. Full lifecycle application development.",
+        },
+        {
+          id: 2,
+          text: "Created a whole set of Web-based Manufacture Execution System to support production processes, ERP transactions, yield tracking and reporting, costs and capacity analysis, based on .NET, Java, SQL, JavaScript, Ajax and etc.",
         },
       ],
     },
@@ -150,9 +150,9 @@ const GLOBAL_CONST = {
     },
     {
       id: 3,
-      title: "Computer Science",
-      date: "2016 - 2017",
-      caption: "Austin Community College",
+      title: "Bachelor of Arts - Computer Science",
+      date: "2006 - 2010",
+      caption: "The University of Texas at Austin",
     },
   ],
 };
