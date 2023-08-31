@@ -108,7 +108,7 @@ const Introduction = () => {
             ref={captionRef_1}
             className="em:text-lg whitespace-pre font-caption em:pt-4 flex flex-col"
           >
-            {"With over 5 years\nof experience in designing and\ndeveloping websites & web and\nmobile applications...."
+            {"With over 10 years\nof experience in designing and\ndeveloping websites & web and\nmobile applications...."
               .split("\n")
               .map((line, index) => (
                 <span key={index} className="opacity-0 ">
