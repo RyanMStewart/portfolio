@@ -152,7 +152,7 @@ const GLOBAL_CONST = {
       id: 3,
       title: "Bachelor of Arts - Computer Science",
       date: "2006 - 2010",
-      caption: "The University of Texas at Austin",
+      caption: "Texas State University",
     },
   ],
 };
